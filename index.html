@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Ivss</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <main>
+
+        <div class="contenedor__todo">
+
+            <div class="caja__trasera">
+
+                <div class="caja__tracera__login">
+                    <h3>Ya tienes un acuenta?</h3>
+                    <p>Inicia sesión para entrar en la página</p>
+                    <button id="btn__iniciar__sesion">Iniciar sesión</button>
+                </div>
+
+                <div class="caja__tracera__registro">
+                    <h3>Aun no tines una cuenta?</h3>
+                    <p>Registrate para que puedas iniciar sesión</p>
+                    <button id="btn__registrarse">Registrarse</button>
+                </div>
+            </div>
+            <!--Formulario de Inicio de sesion y registro-->
+            <div class="contenedor__login__registro">
+                <!--Inicio de sesion-->
+                <form action="php/login_usuario_be.php" method="POST" class="formulario__login">
+                    <h2>Iniciar sesión</h2>
+                    <input type="text" placeholder="Cedula" name="cedula">
+                    <input type="password" placeholder="contraseña" name="contrasena">
+                    <button>Entrar</button>
+                </form>
+                <!--Registro-->
+                <form action="php/registro_usuario_be.php" method="POST" class="formulario__registro">
+                    <h2>Registrarse</h2>
+                    <input type="text" placeholder="Nombre Completo" name="nombre_completo" required>
+                    <input type="text" placeholder="Cedula" name ="cedula" required>
+                    <input type="password" placeholder="Contraseña" name="contrasena" required>
+                    <input type="password" placeholder="Clave de aceso" name="clave" required>
+                    <button>Registrarse</button>
+                </form>
+                <!--lo que pasamos por metodo post/get es name='algo'-->
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
